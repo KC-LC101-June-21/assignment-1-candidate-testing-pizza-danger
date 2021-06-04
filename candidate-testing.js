@@ -13,7 +13,7 @@ let correctAnswers;
 let candidateAnswers;
 
 
-function askForName() {
+function askForName(candidateName = input.question("Enter Your Name: ")) {
   // TODO 1.1b: Ask for candidate's name //
 
 }

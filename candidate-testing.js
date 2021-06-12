@@ -22,14 +22,13 @@ function askQuestion(candidateAnswer = input.question(question)) {
 
 
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  console.log(candidateAnswer);
+  //console.log(candidateAnswer);
 
-
-/*if (candidateAnswer === correctAnswer) {
+if (candidateAnswer === correctAnswer) {
   console.log("Right!");
 } else {
   console.log("Nope, try again.")
-}*/
+}
 
 }
 

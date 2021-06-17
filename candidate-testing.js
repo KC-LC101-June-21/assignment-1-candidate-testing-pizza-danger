@@ -9,17 +9,17 @@ let question = "Who was the first woman in Space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = " ";
 let questions = [
-  "\n1)Who was the first American woman in space? \nYour Answer: ",
-  "\n2)True or false: 5 kilometer == 5000 meters? \nYour Answer: ",
-  "\n3)(5 + 3)/2 * 10 = ? \nYour Answer: ",
-  "\n4)Given the array [8, 'Orbit', 'Trajectory', 45], \nWhat entry is at index 2? \nYour Answer: ",
-  "\n5)What is the minimum crew size for the ISS? \nYour Answer: "
+  "Who was the first American woman in space? ",
+  "True or false: 5 kilometer == 5000 meters? ",
+  "(5 + 3)/2 * 10 = ? ",
+  "Given the array [8, 'Orbit', 'Trajectory', 45], What entry is at index 2? ",
+  "What is the minimum crew size for the ISS? "
 ];
 let correctAnswers = [
-  "sally ride",
+  "Sally Ride",
   "true",
   "40",
-  "trajectory",
+  "Trajectory",
   "3"
 ];
 let candidateAnswers = [];
@@ -28,7 +28,7 @@ let candidateAnswers = [];
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Enter Your Name: ")
-console.log("\nGreetings " + candidateName + "!" + "\nPlease answer the following questions.");
+console.log("\nCandidate Name: " + candidateName + "\n");
 }
 
 /*function askQuestion(candidateAnswer = input.question(question)) {
@@ -45,8 +45,8 @@ if (candidateAnswer === correctAnswer) {
 
 function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
-   candidateAnswers[i] = input.question(questions[i]);
-   console.log('Correct Answer: ' + correctAnswers[i]);
+   candidateAnswers[i] = input.question(`${i+1})${questions[i]})\nYour Answer: `);
+   console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   }
   
 }

@@ -9,11 +9,11 @@ let question = "Who was the first woman in Space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = " ";
 let questions = [
-  "\nWho was the first American woman in space? ",
-  "\nTrue or false: 5 kilometer == 5000 meters? ",
-  "\n(5 + 3)/2 * 10 = ? ",
-  "\nGiven the array [8, 'Orbit', 'Trajectory', 45], What entry is at index 2? ",
-  "\nWhat is the minimum crew size for the ISS? "
+  "\n1)Who was the first American woman in space? \nYour Answer: ",
+  "\n2)True or false: 5 kilometer == 5000 meters? \nYour Answer: ",
+  "\n3)(5 + 3)/2 * 10 = ? \nYour Answer: ",
+  "\n4)Given the array [8, 'Orbit', 'Trajectory', 45], \nWhat entry is at index 2? \nYour Answer: ",
+  "\n5)What is the minimum crew size for the ISS? \nYour Answer: "
 ];
 let correctAnswers = [
   "sally ride",
@@ -33,7 +33,6 @@ console.log("\nGreetings " + candidateName + "!" + "\nPlease answer the followin
 
 /*function askQuestion(candidateAnswer = input.question(question)) {
 
-
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   //console.log(candidateAnswer);
 
@@ -47,14 +46,12 @@ if (candidateAnswer === correctAnswer) {
 function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
    candidateAnswers[i] = input.question(questions[i]).toLowerCase();
+   console.log('Correct Answer: ' + correctAnswers[i]);
   }
-  console.log(candidateAnswers);
+  
 }
 
-
-
 function gradeQuiz(candidateAnswers) {
-
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly
    //
   let grade = 0;
@@ -63,9 +60,20 @@ function gradeQuiz(candidateAnswers) {
       grade += 1;
     }
   } 
-  console.log(grade/5*100 + '%');
+  console.log(`\nYour Score: ${grade/5*100 + '%'}`);
   return grade/5*100 + '%';
 }
+
+//OUTPUT
+/*
+console.log(`Candidate Name: ${candidateName}\n
+\n1)${question[0]}\nYour Answer: ${candidateAnswers[0]}\nCorrect Answer: ${correctAnswer[0]}\n
+\n2)${question[1]}\nYour Answer: ${candidateAnswers[1]}\nCorrect Answer: ${correctAnswer[1]}\n
+\n3)${question[2]}\nYour Answer: ${candidateAnswers[2]}\nCorrect Answer: ${correctAnswer[2]}\n
+\n4)${question[3]}\nYour Answer: ${candidateAnswers[3]}\nCorrect Answer: ${correctAnswer[3]}\n
+\n5)${question[4]}\nYour Answer: ${candidateAnswers[4]}\nCorrect Answer: ${correctAnswer[4]}\n
+\n${gradeQuiz}`);
+*/
 
 function runProgram() {
   askForName();
@@ -74,6 +82,8 @@ function runProgram() {
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
+
+
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //

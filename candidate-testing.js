@@ -45,7 +45,7 @@ if (candidateAnswer === correctAnswer) {
 
 function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
-   candidateAnswers[i] = input.question(questions[i]).toLowerCase();
+   candidateAnswers[i] = input.question(questions[i]);
    console.log('Correct Answer: ' + correctAnswers[i]);
   }
   
@@ -56,7 +56,7 @@ function gradeQuiz(candidateAnswers) {
    //
   let grade = 0;
   for (let i = 0; i <= 4; i++) {
-    if (candidateAnswers[i] === correctAnswers[i]) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       grade += 1;
     }
   } 

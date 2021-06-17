@@ -70,7 +70,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  //input.question("Enter Your Name: ")
+  
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
